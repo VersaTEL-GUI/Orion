@@ -5,7 +5,6 @@ Created on 2020/3/2
 @note: data
 '''
 
-from flask import Flask,views
 from mgt_app.show import show_blueprint
 from mgt_app.show import model
 

@@ -5,7 +5,6 @@ Created on 2020/3/2
 @note: data
 '''
 
-from flask import views
 from flask_vplx.data import datablue
 from flask_vplx.data import model
 
