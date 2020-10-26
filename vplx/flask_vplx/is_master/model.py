@@ -15,8 +15,9 @@ def cors_data(datadict):
 
 class IsMater(views.MethodView):
     def get(self):
-        return jsonify('a')
+        return cors_data(read_flag_file())
 
 def read_flag_file():
     with open('master_flag')as f:
-        r = f.read()
+        num = f.read()
+    return num

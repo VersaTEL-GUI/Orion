@@ -11,7 +11,21 @@
  * */
 
 //操作提示
-var masterIp = "http://10.203.1.76:7777" 
+
+
+function is_master() {
+	$.ajax({
+		url : "http://127.0.0.1:7773/show/is_master",
+		type : "GET",
+		dataType : "json",
+		success : function(is_master_data) {
+			return is_master_data
+		}
+	})
+}
+
+var masterIp = is_master();
+
 function update_resource_operate() {
 	var time = Date.parse(new Date()).toString();// 获取到毫秒的时间戳，精确到毫秒
 	time = time.substr(0, 10);

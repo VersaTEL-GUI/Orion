@@ -6,8 +6,8 @@ Created on 2020/3/2
 @note: data
 '''
 
-from flask import Flask,Blueprint
+from flask import Blueprint
 
 show_blueprint = Blueprint("show_blueprint", __name__,template_folder='templates')
 
-from mgt_app.show import views
+from mgt_app.show import stor_resource

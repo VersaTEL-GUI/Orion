@@ -8,6 +8,6 @@ Created on 2020/3/2
 
 from flask import Blueprint
 
-config_blueprint = Blueprint("config_blueprint", __name__,template_folder='templates')
+config_blueprint = Blueprint("config_blueprint", __name__, template_folder='templates')
 
-from mgt_app.config import views
+from mgt_app.config import iscsi
