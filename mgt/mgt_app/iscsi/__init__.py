@@ -6,7 +6,7 @@ Created on 2020/3/2
 @note: data
 '''
 
-from flask import Flask,Blueprint
+from flask import Blueprint
 
 iscsi_blueprint = Blueprint("iscsi_blueprint", __name__,template_folder='templates')
 

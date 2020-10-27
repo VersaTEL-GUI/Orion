@@ -12,19 +12,23 @@
 
 //操作提示
 
+is_master();
 
 function is_master() {
 	$.ajax({
-		url : "http://127.0.0.1:7773/show/is_master",
+		url : "http://127.0.0.1:7773/is_master",
 		type : "GET",
 		dataType : "json",
 		success : function(is_master_data) {
-			return is_master_data
+
+			alert(is_master_data["is_master_ip"])
+			return is_master_data["is_master_ip"]
 		}
 	})
 }
 
 var masterIp = is_master();
+
 
 function update_resource_operate() {
 	var time = Date.parse(new Date()).toString();// 获取到毫秒的时间戳，精确到毫秒
