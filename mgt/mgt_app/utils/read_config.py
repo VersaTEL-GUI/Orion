@@ -9,15 +9,14 @@ except Exception:
     import ConfigParser as cp
 
 
-name_of_config_file = 'config.ini'
+name_of_config_file = '../../config.ini'
 
 
 def read_config_file():
-    os.chdir(os.path.abspath(os.path.join(os.getcwd(), "../..")))
-    print(os.listdir())
     obj_cfg = cp.ConfigParser(allow_no_value=True)
     obj_cfg.read(name_of_config_file)
     return obj_cfg
+
 
 class IpPortConfig():
 
@@ -46,10 +45,6 @@ def get_web_port():
     cfg = IpPortConfig()
     return cfg.int_port()
 
-
-
 if __name__ == '__main__':
-    print('qqqqqq',os.listdir())
     a=IpPortConfig()
     print(a.list_ip(), a.int_port(), type(a.list_ip()))
-    print('wwwwww', os.listdir())
