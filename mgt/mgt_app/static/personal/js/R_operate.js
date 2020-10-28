@@ -20,7 +20,6 @@ function is_master() {
 		type : "GET",
 		dataType : "json",
 		success : function(is_master_data) {
-
 			alert(is_master_data["is_master_ip"])
 			return is_master_data["is_master_ip"]
 		}

@@ -16,7 +16,7 @@ def get_master_ip():
                 if "1" in response.data.decode():
                     return ip
         except:
-            return ip
+            return '0.0.0.0'
 
 
 def get_web_port():

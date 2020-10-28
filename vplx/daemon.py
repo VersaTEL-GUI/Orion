@@ -10,6 +10,7 @@ username = sundry.get_username()
 tid = ''
 logger = log.Log(username,tid,file_name=log.WEB_LOG_NAME)
 consts.set_glo_log(logger)
+
 app = create_app()
 
 if __name__ == '__main__':
