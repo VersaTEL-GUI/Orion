@@ -16,7 +16,8 @@ def get_master_ip():
                 if "1" in response.data.decode():
                     return ip
         except:
-            return '0.0.0.0'
+            print(f'WARNING ：IP"{ip}"获取master信息失败')
+    return '0.0.0.0'
 
 
 def get_web_port():

@@ -1,7 +1,5 @@
 # coding:utf-8
 
-import sys
-
 try:
     import configparser as cp
 except Exception:
@@ -23,13 +21,12 @@ class IpPortConfig():
         self.cfg = read_config_file()
 
     def list_ip(self):
-        return eval(self.cfg.get('VPLXIP', 'listIP'))
+        return list(i[0] for i in self.cfg.items('VPLXIP'))
 
     def int_port(self):
         return self.cfg.get('VPLXPORT', 'PORT')
 
 
 if __name__ == '__main__':
-    pass
-    # a=IpPortConfig()
-    # print(a.list_ip(), a.int_port(), type(a.list_ip()))
+    a=IpPortConfig()
+    print(a.list_ip(), a.int_port(), type(a.list_ip()))

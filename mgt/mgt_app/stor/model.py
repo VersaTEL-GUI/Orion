@@ -17,12 +17,12 @@ class Stor(views.MethodView):
     def get(self):
         return render_template("prompt_show.html")
 
-class IsMaster(views.MethodView):
+class MasterIP(views.MethodView):
     def get(self):
-        is_master = {
-            'is_master_ip' :cv.get_master_ip()+":"+cv.get_web_port()
+        master_ip = {
+            'master_ip' :cv.get_master_ip()+":"+cv.get_web_port()
         }
-        return jsonify(is_master)
+        return jsonify(master_ip)
     
 class Resource(views.MethodView):
     def get(self):
